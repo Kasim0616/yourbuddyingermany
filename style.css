@@ -1,0 +1,121 @@
+/* style.css */
+
+/* Import Inter Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #90ecdbfb 0%, #bdece8f8 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  padding: 2rem;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #1c1c1c;
+}
+
+p {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  background: linear-gradient(135deg, #a4e1e4, #adf5f5);
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+}
+
+body {
+  background: linear-gradient(to right, #f1f1f1, #f7f7f8);
+}
+
+
+
+label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+  color: #000;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: #3f51b5;
+  outline: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1.1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+footer {
+  margin-top: 3rem;
+  text-align: center;
+  color: #fff;
+}
+
+footer a {
+  color: #130101;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* Mobile-friendly */
+@media (max-width: 600px) {
+  form {
+    padding: 1.5rem;
+  }
+
+  body {
+    padding: 1rem;
+  }
+}
