@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>yourbuddyingermany</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  
+  <!-- Google Font: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Your Custom Styles -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container my-5 text-center">
+    <img src="logo.png" alt="Your Buddy In Germany Logo" class="mb-4" style="max-width: 150px; height: auto;" />
+    <h1 class="mb-3 fw-bold">Start Your Journey In Germany</h1>
+    <h2 class="text-muted mb-4">From Students, For Students</h2>
+  </div>
+
+  <div class="container my-5">
+    <p class="text-center fs-5 mx-auto" style="max-width: 600px;">
+      We’re real students helping you apply to master’s programs in Germany — not a consultancy. If you need SOP help, university suggestions, or visa advice, fill this out and we’ll get in touch.
+    </p>
+
+    <form action="https://formsubmit.co/yourbuddyingermany@gmail.com" method="POST">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+     id="studentForm" action="#" method="POST">
+      <div class="mb-3">
+        <label for="email" class="form-label">📧 Email:</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="fullname" class="form-label">🙋 Fullname:</label>
+        <input type="text" class="form-control" id="fullname" name="name" placeholder="Enter your name" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="whatsapp" class="form-label">📱 WhatsApp Number:</label>
+        <input type="tel" class="form-control" id="whatsapp" name="whatsapp" placeholder="Enter your WhatsApp number" required />
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">🎓 Degree you're planning to study:</label><br />
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="degree" id="masters" value="Master’s" required />
+          <label class="form-check-label" for="masters">Master’s</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="degree" id="bachelors" value="Bachelor’s" />
+          <label class="form-check-label" for="bachelors">Bachelor’s</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="intake" class="form-label">📅 Target Intake:</label>
+        <input type="text" class="form-control" id="intake" name="intake" placeholder="e.g., Fall 2025" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="background" class="form-label">📚 Academic Background:</label>
+        <textarea class="form-control" id="background" name="background" rows="4" placeholder="Brief background..."></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">What help do you need?</label><br />
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="helpSOP" name="help" value="SOP / LOR help" />
+          <label class="form-check-label" for="helpSOP">📄 SOP / LOR help</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="helpUni" name="help" value="University suggestions" />
+          <label class="form-check-label" for="helpUni">🎓 University suggestions</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="helpDocs" name="help" value="Document guidance" />
+          <label class="form-check-label" for="helpDocs">🧾 Application document help</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="helpVisa" name="help" value="Visa process help" />
+          <label class="form-check-label" for="helpVisa">🛂 Visa help</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="helpExplore" name="help" value="Exploring process" />
+          <label class="form-check-label" for="helpExplore">🤔 Just exploring</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="specificHelp" class="form-label">💬 Anything specific?</label>
+        <textarea class="form-control" id="specificHelp" name="specificHelp" rows="3" placeholder="Type here..."></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="source" class="form-label">🔍 How did you find us?</label>
+        <input type="text" class="form-control" id="source" name="source" required />
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">🚀 Submit</button>
+    </form>
+  </div>
+
+  <footer class="text-center mt-5 text-muted">
+    <p>&copy; 2025 Your Buddy In Germany. All rights reserved.</p>
+    <p>Follow us on <a href="https://www.instagram.com/yourbuddyingermany" target="_blank">Instagram</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("studentForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      this.innerHTML = `
+        <div class="text-center p-5">
+          <h2 class="text-success">✅ Submitted!</h2>
+          <p class="fs-5">Thanks! We'll reach out soon on WhatsApp 📱</p>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
