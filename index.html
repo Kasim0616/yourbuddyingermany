@@ -1,53 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>yourbuddyingermany</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>yourbuddyingermany.com</title>
 
   <!-- Bootstrap 5 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  
+
   <!-- Google Font: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 
   <!-- Your Custom Styles -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-  <div class="container my-5 text-center">
-    <img src="logo.png" alt="Your Buddy In Germany Logo" class="mb-4" style="max-width: 150px; height: auto;" />
-    <h1 class="mb-3 fw-bold">Start Your Journey In Germany</h1>
-    <h2 class="text-muted mb-4">From Students, For Students</h2>
+  <div class="landing-container">
+
+    <div class="img-container">
+      <img src="logo.png" alt="Your Buddy In Germany Logo" style="max-width: 150px; height: auto;" />
+    </div>
+
+    <div class="text-container">
+      <div>
+        <h1 class="header-tagline">Start Your Journey In Germany</h1>
+        <h2 class="subtitle">From Students, For Students</h2>
+      </div>
+ <p class="description">
+        We are real students helping you apply to master’s programs in Germany not a consultancy. If you need SOP help,
+        university suggestions, or visa advice, fill this out and we’ll get in touch. 
+      </p>
+      <button class="btn btn-primary">
+        <a href="#form-wrapper" style="color: white;text-decoration: none;">Apply now</a>
+      </button>
+    </div>
+
+
+
   </div>
 
   <div class="container my-5">
-    <p class="text-center fs-5 mx-auto" style="max-width: 600px;">
-      We’re real students helping you apply to master’s programs in Germany — not a consultancy. If you need SOP help, university suggestions, or visa advice, fill this out and we’ll get in touch.
-    </p>
 
-    <form action="https://formsubmit.co/yourbuddyingermany@gmail.com" method="POST">
-  <input type="hidden" name="_captcha" value="false">
-  <input type="hidden" name="_template" value="table">
-    
+
+    <form id="form-wrapper" action="https://formsubmit.co/yourbuddyingermany@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_template" value="table">
+
       <div class="mb-3">
-        <label for="email" class="form-label">📧 Email:</label>
+        <label for="email" class="form-label">Email:</label>
         <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
       </div>
 
       <div class="mb-3">
-        <label for="fullname" class="form-label">🙋 Fullname:</label>
+        <label for="fullname" class="form-label">Fullname:</label>
         <input type="text" class="form-control" id="fullname" name="name" placeholder="Enter your name" required />
       </div>
 
       <div class="mb-3">
-        <label for="whatsapp" class="form-label">📱 WhatsApp Number:</label>
-        <input type="tel" class="form-control" id="whatsapp" name="whatsapp" placeholder="Enter your WhatsApp number" required />
-      </div>
+  <label for="whatsapp" class="form-label">WhatsApp Number:</label>
+  <div class="input-group">
+    
+    <input
+      type="tel"
+      class="form-control"
+      id="countryCode"
+      name="countryCode"
+      placeholder="+91"
+      style="max-width: 60px;"
+      value="+91"
+      required
+    />
+    <input
+      type="tel"
+      class="form-control"
+      id="whatsapp"
+      name="whatsapp"
+      placeholder="Enter WhatsApp number"
+      required
+    />
+  </div>
+</div>
+
 
       <div class="mb-3">
-        <label class="form-label">🎓 Degree you're planning to study:</label><br />
+        <label class="form-label">Degree you're planning to study:</label><br />
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="degree" id="masters" value="Master’s" required />
           <label class="form-check-label" for="masters">Master’s</label>
@@ -59,56 +98,68 @@
       </div>
 
       <div class="mb-3">
-        <label for="intake" class="form-label">📅 Target Intake:</label>
-        <input type="text" class="form-control" id="intake" name="intake" placeholder="e.g., Fall 2025" required />
+  <label for="intake" class="form-label">Choose an intake:</label>
+  <select class="form-control" id="intake" name="intake" required>
+    <option value="" disabled selected>"eg : Winter 2025"</option>
+    <option value="Winter 2025">Winter 2025</option>
+    <option value="Summer 2025">Summer 2025</option>
+    <option value="Winter 2026">Winter 2026</option>
+    <option value="Summer 2026">Summer 2026</option>
+  </select>
+</div>
+
+
+      <div class="mb-3">
+        <label for="background" class="form-label">Academic Background:</label>
+        <textarea class="form-control" id="background" name="background" rows="4"
+          placeholder="Brief background..."></textarea>
       </div>
 
       <div class="mb-3">
-        <label for="background" class="form-label">📚 Academic Background:</label>
-        <textarea class="form-control" id="background" name="background" rows="4" placeholder="Brief background..."></textarea>
-      </div>
-
-      <div class="mb-3">
-        <label class="form-label">What help do you need?</label><br />
+        <label class="form-label">What Services do you need?</label><br />
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="helpSOP" name="help" value="SOP / LOR help" />
-          <label class="form-check-label" for="helpSOP">📄 SOP / LOR help</label>
+          <input class="form-check-input" type="checkbox" id="helpSOP" name="help" value="SOP / LOR " />
+          <label class="form-check-label" for="helpSOP">SOP / LOR </label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="helpUni" name="help" value="University suggestions" />
-          <label class="form-check-label" for="helpUni">🎓 University suggestions</label>
+          <input class="form-check-input" type="checkbox" id="helpUni" name="help" value="University Applications" />
+          <label class="form-check-label" for="helpUni">University Applications</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="helpDocs" name="help" value="Document guidance" />
-          <label class="form-check-label" for="helpDocs">🧾 Application document help</label>
+          <input class="form-check-input" type="checkbox" id="helpDocs" name="help" value="Blocked Account/Insurances" />
+          <label class="form-check-label" for="helpDocs">Blocked Account/Insurances</label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="helpVisa" name="help" value="Visa process help" />
-          <label class="form-check-label" for="helpVisa">🛂 Visa help</label>
+          <label class="form-check-label" for="helpVisa">Visa help</label>
         </div>
         <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="helpExplore" name="help" value="Exploring process" />
-          <label class="form-check-label" for="helpExplore">🤔 Just exploring</label>
+          <input class="form-check-input" type="checkbox" id="helpExplore" name="help" value="APS Process" />
+          <label class="form-check-label" for="helpExplore">APS Process</label>
         </div>
       </div>
 
       <div class="mb-3">
-        <label for="specificHelp" class="form-label">💬 Anything specific?</label>
-        <textarea class="form-control" id="specificHelp" name="specificHelp" rows="3" placeholder="Type here..."></textarea>
+        <label for="specificHelp" class="form-label">Mention Anything If specific?</label>
+        <textarea class="form-control" id="specificHelp" name="specificHelp" rows="3"
+          placeholder="Type here..."></textarea>
       </div>
 
       <div class="mb-3">
-        <label for="source" class="form-label">🔍 How did you find us?</label>
+        <label for="source" class="form-label">How did you find us?</label>
         <input type="text" class="form-control" id="source" name="source" required />
       </div>
 
-      <button type="submit" class="btn btn-primary w-100">🚀 Submit</button>
+      <button type="submit" class="btn btn-primary w-100"> Submit</button>
     </form>
   </div>
 
   <footer class="text-center mt-5 text-muted">
-    <p>&copy; 2025 Your Buddy In Germany. All rights reserved.</p>
-    <p>Follow us on <a href="https://www.instagram.com/yourbuddyingermany" target="_blank">Instagram</a></p>
+    <p>&copy; 2025 Your Buddy In Germany. All rights reserved.
+  <br>
+  For any queries, please reach us:
+  <a href="mailto:yourbuddyingermany@gmail.com">yourbuddyingermany@gmail.com</a>
+ Visit us on <a href="https://www.instagram.com/yourbuddyingermany" target="_blank">Instagram</a></p>
   </footer>
 
   <script>
@@ -117,10 +168,11 @@
       this.innerHTML = `
         <div class="text-center p-5">
           <h2 class="text-success">✅ Submitted!</h2>
-          <p class="fs-5">Thanks! We'll reach out soon on WhatsApp 📱</p>
+          <p class="fs-5">Thanks! We'll reach out soon on WhatsApp </p>
         </div>
       `;
     });
   </script>
 </body>
+
 </html>
